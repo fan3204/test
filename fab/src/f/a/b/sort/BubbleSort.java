@@ -1,7 +1,8 @@
 package f.a.b.sort;
 
-public class BubbleSort {
+public class BubbleSort implements Sort {
 
+    @Override
     public void sort(int[] a, int n) {
         if (n <=1 ) return;
         for (int i = 0; i < n; i++) {
