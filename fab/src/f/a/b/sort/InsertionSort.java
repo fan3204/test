@@ -21,6 +21,5 @@ public class InsertionSort implements Sort {
             // 插入数据
             a[j + 1] = value;
         }
-
     }
 }
