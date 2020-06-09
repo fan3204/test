@@ -13,6 +13,9 @@ public class QuickSort implements Sort {
         }
 
         int partition = getPartition(a, left, right);
+        System.out.println("l:" + left);
+        System.out.println("m:" + partition);
+        System.out.println("r:" + right);
         sort(a, left, partition - 1);
         sort(a, partition + 1, right);
     }
@@ -20,7 +23,8 @@ public class QuickSort implements Sort {
     private int getPartition(int[] a, int left, int right) {
         int point = a[right];
         int i = left;
-        for (int j = left; j < right - 1; j++) {
+        for (int j = left; j <= right - 1; j++) {
+            // 左大右小
             if (a[j] > point) {
                 int tmp = a[j];
                 a[j] = a[i];
